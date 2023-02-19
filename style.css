@@ -1,32 +1,34 @@
-/*farem servir la propietat inline-block i float*/
-/* definicions
-    display= https://developer.mozilla.org/es/docs/Web/CSS/display
-     block: fa que el comportament de l'element sigui com a bloc.
-     inline: l'element es renderitzarà en línia amb altres elements.
-     inline-block: l'element tindrà un comportament barreja entre els dos anteriors.  
-    inherit= https://developer.mozilla.org/es/docs/Web/CSS/inherit 
-    float= és una propietat de posicionament en CSS, és a dir, com s'ubiquen els elements dins d'un document HTML. */
-*{margin:0;padding:0;box-sizing:border-box;font-size:0;}
-            
-nav 
-    nav lu{
-        display: none;
-    }
-    a{
+*{
+    padding:0px;
+    margin:0px;
+}
+#header {
+    margin:auto;
+    width:500px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+   ul, ol {
+    list-style:none;
+   }
+   .nav li a{
+    background-color: black;
+    color: ghostwhite;
     text-decoration:none;
-    color:inherit;
-    font-size:14px;
-    } 
-    nav li{
-    display:inline-block;
-    width:10%;
-    padding:5px 10px;
-    background-color:#ea1010;
-    border:1px solid #000;
-    text-align:center;
-    color:#fff;
-    }
-    nav li:hover{
-    background-color:#fff;
-    color:#000;
-    }
+    padding:10px 15px;
+    display:block;
+   }
+   .nav li a:hover{
+    background-color:#434343;
+       }
+
+.nav > li {
+    float: left;
+}
+.nav li ul {
+    display:none;
+    position: absolute;
+    min-width: 140px;
+}
+.nav li: hover > ul{
+    display:block;
+}
